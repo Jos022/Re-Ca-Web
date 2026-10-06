@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re&Ca Socorrismo</title>
+  <link rel="icon" type="image/png" href="./img/reyca_logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CONFIGURACIÓN DE TU NUEVA PALETA DE COLORES -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#CBB377',       /* Marrón suave / Dorado */
+              'gold-dark': '#B09B60', /* Tono marrón/dorado más oscuro para hover */
+              navy: '#073F62',       /* Azul marino */
+              'navy-dark': '#052F4A', /* Azul marino más oscuro para hover */
+              offwhite: '#FAF9F5',   /* Blanco cálido para el fondo */
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-brand-offwhite text-brand-navy font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- HEADER NAVEGABLE -->
+  <header class="sticky top-0 z-50 bg-brand-offwhite/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+      <!-- LOGO + TEXTO MARCA -->
+      <a href="#" class="flex items-center gap-2.5">
+        <img src="./img/reyca_logo.png" alt="Logo Re&Ca Socorrismo" class="h-8 w-auto">
+        <span class="text-xl font-bold text-brand-navy tracking-tight hidden sm:block">
+          Re&Ca Socorrismo<span class="text-brand-gold">.</span>
+        </span>
+      </a>
+
+      <!-- MENÚ DE NAVEGACIÓN DESKTOP -->
+      <div class="hidden md:flex items-center justify-end flex-1 gap-8">
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
+          <a href="#inicio" class="hover:text-brand-gold transition">Inicio</a>
+          <a href="#servicios" class="hover:text-brand-gold transition">Servicios</a>
+          <a href="#sobre-mi" class="hover:text-brand-gold transition">Nosotros</a>
+        </nav>
+
+        <!-- BOTÓN CTA (AZUL MARINO SÓLIDO) -->
+        <div class="hidden md:block">
+          <a href="#contacto" class="bg-brand-navy text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:bg-brand-navy-dark transition duration-200">
+            Contactanos
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section id="inicio" class="relative py-16 md:py-24 bg-gradient-to-b from-brand-offwhite to-white border-b border-brand-gold/20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- COLUMNA TEXTO (Izquierda) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+          <!-- TÍTULO PRINCIPAL -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy tracking-tight leading-tight">
+            Aprendé a actuar cuando más importa<span class="text-brand-gold">.</span>
+          </h1>
+
+          <!-- SUBTÍTULO -->
+          <p class="text-base sm:text-lg text-gray-600 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+            Capacitaciones en RCP, primeros auxilios y uso del DEA para estar preparado ante una emergencia.
+          </p>
+
+          <!-- BOTONES DE ACCIÓN (CTA) -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <!-- BOTÓN PRINCIPAL (MARRÓN / DORADO) -->
+            <a href="#contacto" class="w-full sm:w-auto bg-brand-gold text-white font-semibold px-7 py-3.5 rounded-xl shadow-md hover:bg-brand-gold-dark transition duration-200 text-center">
+              Solicitar presupuesto
+            </a>
+            <!-- BOTÓN SECUNDARIO (OUTLINE AZUL) -->
+            <a href="#servicios" class="w-full sm:w-auto text-brand-navy font-semibold px-7 py-3.5 rounded-xl border border-brand-navy/20 hover:bg-brand-gold/10 transition duration-200 text-center">
+              Ver servicios
+            </a>
+          </div>
+
+        </div>
+
+        <!-- COLUMNA IMAGEN / ILUSTRACIÓN (Derecha) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md lg:max-w-none">
+            <!-- Sombra decorativa de fondo con la nueva paleta -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-navy rounded-3xl blur opacity-25"></div>
+            
+            <!-- Contenedor de Imagen -->
+            <div class="relative bg-white p-2 rounded-2xl shadow-xl border border-gray-100">
+              <img 
+                src="./img/rcp.jpe" 
+                alt="Socorrismo y prevención" 
+                class="w-full h-80 sm:h-96 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
